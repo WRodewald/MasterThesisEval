@@ -1,0 +1,494 @@
+# test config mushra page, no waveform, 3 conditions,  looping, anchor35, anchor 70
+
+
+testname: MUSHRA with custom Questionaire
+testId: mushra_customquestionaire
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+  - type: generic
+    id: all
+    name: All listening tests
+    content: Round 1
+  -
+    - random
+    
+    - type: mushra
+      id: f1_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f1_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f1_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f1_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f1_a/audio/synthesized_f1_a.wav
+
+
+    - type: mushra
+      id: f1_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f1_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f1_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f1_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f1_i/audio/synthesized_f1_i.wav
+
+
+    - type: mushra
+      id: f1_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f1_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f1_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f1_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f1_o/audio/synthesized_f1_o.wav
+
+
+    - type: mushra
+      id: f4_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f4_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f4_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f4_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f4_a/audio/synthesized_f4_a.wav
+
+
+    - type: mushra
+      id: f4_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f4_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f4_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f4_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f4_i/audio/synthesized_f4_i.wav
+
+
+    - type: mushra
+      id: f4_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f4_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f4_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f4_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f4_o/audio/synthesized_f4_o.wav
+
+
+    - type: mushra
+      id: f5_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f5_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f5_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f5_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f5_a/audio/synthesized_f5_a.wav
+
+
+    - type: mushra
+      id: f5_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f5_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f5_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f5_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f5_i/audio/synthesized_f5_i.wav
+
+
+    - type: mushra
+      id: f5_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f5_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f5_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f5_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f5_o/audio/synthesized_f5_o.wav
+
+
+    - type: mushra
+      id: f6_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f6_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f6_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f6_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f6_a/audio/synthesized_f6_a.wav
+
+
+    - type: mushra
+      id: f6_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f6_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f6_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f6_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f6_i/audio/synthesized_f6_i.wav
+
+
+    - type: mushra
+      id: f6_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f6_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f6_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f6_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f6_o/audio/synthesized_f6_o.wav
+
+
+    - type: mushra
+      id: f8_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f8_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f8_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f8_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f8_a/audio/synthesized_f8_a.wav
+
+
+    - type: mushra
+      id: f8_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f8_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f8_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f8_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f8_i/audio/synthesized_f8_i.wav
+
+
+    - type: mushra
+      id: f8_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/f8_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f8_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f8_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f8_o/audio/synthesized_f8_o.wav
+
+
+    - type: mushra
+      id: m1_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m1_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m1_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m1_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m1_a/audio/synthesized_m1_a.wav
+
+
+    - type: mushra
+      id: m1_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m1_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m1_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m1_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m1_i/audio/synthesized_m1_i.wav
+
+
+    - type: mushra
+      id: m1_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m1_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m1_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m1_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m1_o/audio/synthesized_m1_o.wav
+
+
+    - type: mushra
+      id: m2_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m2_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m2_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m2_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m2_a/audio/synthesized_m2_a.wav
+
+
+    - type: mushra
+      id: m2_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m2_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m2_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m2_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m2_i/audio/synthesized_m2_i.wav
+
+
+    - type: mushra
+      id: m2_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m2_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m2_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m2_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m2_o/audio/synthesized_m2_o.wav
+
+
+    - type: mushra
+      id: m4_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m4_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m4_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m4_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m4_a/audio/synthesized_m4_a.wav
+
+
+    - type: mushra
+      id: m4_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m4_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m4_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m4_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m4_i/audio/synthesized_m4_i.wav
+
+
+    - type: mushra
+      id: m4_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m4_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m4_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m4_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m4_o/audio/synthesized_m4_o.wav
+
+
+    - type: mushra
+      id: m5_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m5_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m5_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m5_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m5_a/audio/synthesized_m5_a.wav
+
+
+    - type: mushra
+      id: m5_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m5_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m5_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m5_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m5_i/audio/synthesized_m5_i.wav
+
+
+    - type: mushra
+      id: m5_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m5_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m5_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m5_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m5_o/audio/synthesized_m5_o.wav
+
+
+    - type: mushra
+      id: m8_a
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m8_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m8_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m8_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m8_a/audio/synthesized_m8_a.wav
+
+
+    - type: mushra
+      id: m8_i
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m8_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m8_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m8_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m8_i/audio/synthesized_m8_i.wav
+
+
+    - type: mushra
+      id: m8_o
+      name: Mono Trial
+      content: test description
+      showWaveform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_wav/m8_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m8_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m8_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m8_o/audio/synthesized_m8_o.wav
+
+  - type: finish
+    name: Thank you
+    content: Thank you for attending
+    popupcontent: Your results were sent. Goodbye and have a nice day
+    showResults: true
+    writeResults: true
+    questionnaire:
+        - type: text
+          label: eMail
+          name: email
+        - type: number
+          label: Age
+          name: age
+          min: 0
+          max: 100
+          default: 30
+        - type: likert
+          name: gender
+          label: Gender
+          response:
+            - value: female
+              label: Female
+            - value: male
+              label: Male
+            - value: other
+              label: Other
