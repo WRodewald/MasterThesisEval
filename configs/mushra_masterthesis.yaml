@@ -14,6 +14,12 @@ pages:
     id: all
     name: All listening tests
     content: Round 1
+  - type: volume
+    id: vol
+    name: Volume Settings
+    content: Please adjust the volume.
+    stimulus: configs/resources/audio/results_wav/f1_a/audio/original.wav
+    defaultVolume: 0.5
   -
     - random
     
