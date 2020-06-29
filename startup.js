@@ -83,6 +83,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "mushra") {
         var mushraPage = new MushraPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
         _pageManager.addPage(mushraPage);
+      } else if (pageConfig.type == "quality") {
+        var qualityPage = new QualityPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, errorHandler, config.language);
+        _pageManager.addPage(qualityPage);
       } else if ( pageConfig.type == "spatial"){
         _pageManager.addPage(new SpatialPage(_pageManager, pageConfig, session, audioContext, config.bufferSize, audioFileLoader, errorHandler, config.language));
       } else if (pageConfig.type == "paired_comparison") {
@@ -100,6 +103,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "likert_multi_stimulus") {
         var likertMultiStimulusPage = new LikertMultiStimulusPage(pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
         _pageManager.addPage(likertMultiStimulusPage);
+      } else if (pageConfig.type == "finish") {
+        var finishPage = new FinishPage(_pageManager, session, dataSender, pageConfig, config.language);
+        _pageManager.addPage(finishPage);
       } else if (pageConfig.type == "finish") {
         var finishPage = new FinishPage(_pageManager, session, dataSender, pageConfig, config.language);
         _pageManager.addPage(finishPage);
@@ -223,7 +229,7 @@ var configFile = '';
 if (configArg) {
   configFile = 'configs/' + configArg;
 } else {
-  configFile = 'configs/mushra_masterthesis.yaml';
+  configFile = 'configs/quality_test.yaml';
 }
 
 

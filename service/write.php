@@ -84,6 +84,57 @@ if ($write_mushra) {
 	fclose($fp);
 }
 
+// quality
+$write_quality = false;
+$qualityCsvData = array();
+
+
+$input = array("session_test_id");
+for($i =0; $i < $length; $i++){
+	array_push($input, $session->participant->name[$i]);
+}
+array_push($input, "trial_id", "rating_item", "rating_score", "rating_time", "rating_comment");
+array_push($qualityCsvData, $input);
+
+ 
+ 
+ foreach ($session->trials as $trial) {
+  if ($trial->type == "quality") {
+	$write_quality = true;
+
+	  foreach ($trial->responses as $response) {
+	  	
+		
+		$results = array($session->testId);
+		for($i =0; $i < $length; $i++){
+			array_push($results, $session->participant->response[$i]);
+		}  
+		array_push($results, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment); 
+	  
+	  	array_push($qualityCsvData, $results);
+	  	
+	  
+	  } 
+	    /*array_push($qualityCsvData, array($session->testId, $session->participant->email, $session->participant->age, $session->participant->gender, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment));
+		 * 
+		 */     
+  }
+}
+		
+if ($write_quality) {
+	$filename = $filepathPrefix."quality".$filepathPostfix;
+	$isFile = is_file($filename);
+	$fp = fopen($filename, 'a');
+	foreach ($qualityCsvData as $row) {
+		if ($isFile) {	    	
+			$isFile = false;
+		} else {
+		   fputcsv($fp, $row);
+		}
+	}
+	fclose($fp);
+}
+
 // paired comparison
 
 $write_pc = false;

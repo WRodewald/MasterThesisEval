@@ -1,0 +1,54 @@
+# test config mushra page, no waveform, 3 conditions,  looping, anchor35, anchor 70
+
+
+testname: Singing Voice Synthesis - Evaluation
+testId: mushra_customquestionaire
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+  - type: quality
+    id: m8_a
+    name: Mono Trial
+    content: Please rate the quality of all stimuli.
+    showWaveform: true
+    enableLooping: true
+    randomize: true
+    reference: configs/resources/audio/results_wav/m8_a/audio/synthesized_m8_a.wav
+    createAnchor35: false
+    createAnchor70: false
+    qualityItems:
+        Pitch: Pitch
+        Vowel: Vowel
+        Breathiness: Breathiness
+        Roughness: Roughness
+       
+  - type: finish
+    name: Thank you
+    content: Thank you for attending
+    popupcontent: Your results were sent. Goodbye and have a nice day
+    showResults: true
+    writeResults: true
+    questionnaire:
+        - type: text
+          label: eMail
+          name: email
+        - type: number
+          label: Age
+          name: age
+          min: 0
+          max: 100
+          default: 30
+        - type: likert
+          name: gender
+          label: Gender
+          response:
+            - value: female
+              label: Female
+            - value: male
+              label: Male
+            - value: other
+              label: Other
