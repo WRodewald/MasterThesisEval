@@ -137,6 +137,16 @@ td.stopButton {
   margin : 0 auto;
 }
 
+#buttonStop.wide, .audioControlElement.wide {
+  width: 6.5em !important;
+}
+
+
+
+.ABButton {
+  width:3em !important;
+}
+
 #mainUp {
   width : 100%;
 }

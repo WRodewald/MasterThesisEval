@@ -86,6 +86,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       } else if (pageConfig.type == "quality") {
         var qualityPage = new QualityPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, errorHandler, config.language);
         _pageManager.addPage(qualityPage);
+      } else if (pageConfig.type == "quality_ab") {
+        var qualityABPage = new QualityABPage(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, errorHandler, config.language);
+        _pageManager.addPage(qualityABPage);
       } else if ( pageConfig.type == "spatial"){
         _pageManager.addPage(new SpatialPage(_pageManager, pageConfig, session, audioContext, config.bufferSize, audioFileLoader, errorHandler, config.language));
       } else if (pageConfig.type == "paired_comparison") {

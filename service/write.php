@@ -135,6 +135,57 @@ if ($write_quality) {
 	fclose($fp);
 }
 
+// quality AB
+$write_quality_ab = false;
+$qualityABCsvData = array();
+
+
+$input = array("session_test_id");
+for($i =0; $i < $length; $i++){
+	array_push($input, $session->participant->name[$i]);
+}
+array_push($input, "trial_id", "rating_item", "rating_score", "reversed", "rating_time", "rating_comment");
+array_push($qualityABCsvData, $input);
+
+ 
+ 
+ foreach ($session->trials as $trial) {
+  if ($trial->type == "quality_ab") {
+	$write_quality_ab = true;
+
+	  foreach ($trial->responses as $response) {
+	  	
+		
+		$results = array($session->testId);
+		for($i =0; $i < $length; $i++){
+			array_push($results, $session->participant->response[$i]);
+		}  
+		array_push($results, $trial->id, $response->name, $response->value, $response->reversed, $response->time, $response->comment); 
+	  
+	  	array_push($qualityABCsvData, $results);
+	  	
+	  
+	  } 
+	    /*array_push($qualityABCsvData, array($session->testId, $session->participant->email, $session->participant->age, $session->participant->gender, $trial->id, $response->stimulus, $response->score, $response->time, $response->comment));
+		 * 
+		 */     
+  }
+}
+		
+if ($write_quality_ab) {
+	$filename = $filepathPrefix."quality_ab".$filepathPostfix;
+	$isFile = is_file($filename);
+	$fp = fopen($filename, 'a');
+	foreach ($qualityABCsvData as $row) {
+		if ($isFile) {	    	
+			$isFile = false;
+		} else {
+		   fputcsv($fp, $row);
+		}
+	}
+	fclose($fp);
+}
+
 // paired comparison
 
 $write_pc = false;
