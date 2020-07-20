@@ -232,7 +232,7 @@ var configFile = '';
 if (configArg) {
   configFile = 'configs/' + configArg;
 } else {
-  configFile = 'configs/quality_test.yaml';
+  configFile = 'configs/masterthesis_welcome.yaml';
 }
 
 

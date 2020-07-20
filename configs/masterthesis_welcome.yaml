@@ -1,0 +1,16 @@
+# test config mushra page, no waveform, 3 conditions,  looping, anchor35, anchor 70
+
+
+testname: Singing Voice Synthesis - Welcome
+testId: welcome_page
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+  - type: generic
+    id: all
+    name: Welcome!
+    content: Round 1
