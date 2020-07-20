@@ -13,4 +13,16 @@ pages:
   - type: generic
     id: all
     name: Welcome!
-    content: Round 1
+    content: This study aims to evaluate the performance of a voice synthesis method in two experiments. Both take approximately 20 to 30 minutes. Please follow one or both links to participate in either one or both experiments. 
+             <br><br>
+             <b> For TU Berlin Audio Communication Students:</b><br>For your participation, 30 or 60 minutes for one or both experiments can be added to your <i>Versuchspersonenstunden</i>. Simply fill in your immatriculation number in the final page of each experiment.
+             <br><br>
+             <b><a href="http://127.0.0.1/?config=masterthesis_mushra.yaml" target="_blank"> Experiment A </a></b><br><br>
+             <b><a href="http://127.0.0.1/?config=masterthesis_quality.yaml" target="_blank"> Experiment B </a></b>
+
+             <br><br><br>
+             <b>Note.</b>
+             <br>
+             The links above are randomized in order to even out participiation between both experiments. Both experiments will be described in detail before starting. If you wish to only participate in one experiment, please choose
+             one of the links randomly.
+             

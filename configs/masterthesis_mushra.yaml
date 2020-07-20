@@ -9,22 +9,112 @@ showButtonPreviousPage: true
 remoteService: service/write.php
 
 
-pages:        
+pages:    
   - type: generic
-    id: all
-    name: Welcome
-    content: Round 1
+    id: generic_welcome
+    name: Welcome!
+    content: This study aims to evaluate the performance of a voice synthesis method. This experiment is expected to last between <b>20 and 30</b> minutes, but you are free  
+      to take as much time as you need. <br>
+      It is strongly advised to <b>use headphones</b>. If you experience any technical difficulies, it is advised to use a <b>laptop or desktop system</b> and the web browser <b>Chrome</b>.<br><br>
+      
+      <b>Procedure:</b>
+      
+      <ul>
+        <li>The goal of this experiment is to evaluate the percieved quality of various sounds.</li> 
+        <li>In this listening test, you will be presented with a reference sound as well as a collection of 5 altered versions of this reference. You will have to <b>rate the quality of each sound in relation to the reference.</b></li>
+        <li>At each trial, <b>at least one of the sounds should be rated 0</b> and <b>at least one should be rated 100.</b></li>
+        <li>Following this welcoming page, you will have the chance to adjust the volume. Please do not change the volume between samples. 
+      </ul>
+
+      <b>Privacy Notice</b><br>
+      The data collected in this study is used solely for the evaluation of my master thesis. <br>
+      No additional data is stored or processed in any way. For questions, please contact:<br>
+      
+      <small><a href="mailto:w.rodewald@campus.tu-berlin.de" style="text-decoration:none;">William Rodewald, w.rodewald@campus.tu-berlin.de</a></small>
+
   - type: volume
     id: vol
     name: Volume Settings
-    content: Please adjust the volume. You will not be able to adjusted it after this page.
+    content: Please adjust the volume. You should not adjusted your volume during the experiment but but you may come back to this page if necessary.
     stimulus: configs/resources/audio/results_wav/f1_a/audio/original.wav
     defaultVolume: 0.5
 
   - type: generic
-    id: all
-    name: All listening tests
-    content: This page describes what is to be done in the following test. Four stimuli are presented
+    id: generic_example
+    name: Examples 
+    content: The following four exemplary trials will give You an idea of what samples and alterations to expect.<br>
+             They are not part of the experiment and are not evaluated.
+
+  -
+    - type: mushra
+      id: example_f1_i
+      name: Example 1/4
+      content: Please rate the quality of all stimuli.
+      showWaveform: true
+      enableLooping: true
+      randomize: true
+      reference: configs/resources/audio/results_wav/f1_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f1_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f1_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f1_i/audio/synthesized_f1_i.wav
+          C4: configs/resources/audio/results_wav/f1_i/audio/anchor35.wav
+
+    - type: mushra
+      id: example_f4_o
+      name: Example 2/4
+      content: Please rate the quality of all stimuli.
+      showWaveform: true
+      enableLooping: true
+      randomize: true
+      reference: configs/resources/audio/results_wav/f4_o/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/f4_o/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/f4_o/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/f4_o/audio/synthesized_f4_o.wav
+          C4: configs/resources/audio/results_wav/f4_o/audio/anchor35.wav
+
+    - type: mushra
+      id: example_m8_i
+      name: Example 3/4
+      content: Please rate the quality of all stimuli.
+      showWaveform: true
+      enableLooping: true
+      randomize: true
+      reference: configs/resources/audio/results_wav/m8_i/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m8_i/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m8_i/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m8_i/audio/synthesized_m8_i.wav
+          C4: configs/resources/audio/results_wav/m8_i/audio/anchor35.wav
+
+    - type: mushra
+      id: example_m2_a
+      name: Example 4/4
+      content: Please rate the quality of all stimuli.
+      showWaveform: true
+      enableLooping: true
+      randomize: true
+      reference: configs/resources/audio/results_wav/m2_a/audio/original.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          C1: configs/resources/audio/results_wav/m2_a/audio/harmonic.wav
+          C2: configs/resources/audio/results_wav/m2_a/audio/synthesis_estimated.wav
+          C3: configs/resources/audio/results_wav/m2_a/audio/synthesized_m2_a.wav
+          C4: configs/resources/audio/results_wav/m2_a/audio/anchor35.wav
+
+
+  - type: generic
+    id: generic_trial
+    name: Start of Experiment
+    content: The following pages are part of the experiment. Please listen carefully and rate the quality of every stimulus in relation to the reference. 
   -
     - random
     
@@ -63,23 +153,23 @@ pages:
 
   - type: finish
     name: Thank you
-    content: Thank you for attending
-    popupcontent: Your results were sent. Goodbye and have a nice day
-    showResults: true
+    content: This final page will ask You some questions about Your person. Feel free leave them empty if You don't wish to share personal information.<br>
+             After sending Your results, please <b>wait</b> for an pop-up to show. This will signalise that the data was successfully stored. 
+    popupcontent: Your results were sent. Thank You very much for Your participation!
+    showResults: false
     writeResults: true
     questionnaire:
-        - type: text
-          label: eMail
-          name: email
         - type: number
           label: Age
           name: age
           min: 0
           max: 100
           default: 30
+          optional: true
         - type: likert
           name: gender
           label: Gender
+          optional: true
           response:
             - value: female
               label: Female
@@ -87,3 +177,13 @@ pages:
               label: Male
             - value: other
               label: Other
+            - value: none
+              label: Prefer not to answer
+        - type: number
+          label: TU Berlin MatrNr.
+          name: matr
+          min: 0
+          max: 9999999
+          default: 0
+          optional: true
+
