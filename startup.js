@@ -79,7 +79,10 @@ function addPagesToPageManager(_pageManager, _pages) {
         _pageManager.addPage(new GenericPage(_pageManager, pageConfig));
       } else if (pageConfig.type == "volume") {
         var volumePage = new VolumePage(_pageManager, audioContext, audioFileLoader, pageConfig, config.bufferSize, errorHandler, config.language);
-        _pageManager.addPage(volumePage);
+        _pageManager.addPage(volumePage);        
+      } else if (pageConfig.type == "example") {
+        var examplePage = new ExamplePage(_pageManager, audioContext, audioFileLoader, pageConfig, config.bufferSize, errorHandler, config.language);
+        _pageManager.addPage(examplePage);
       } else if (pageConfig.type == "mushra") {
         var mushraPage = new MushraPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
         _pageManager.addPage(mushraPage);
@@ -233,6 +236,8 @@ if (configArg) {
   configFile = 'configs/' + configArg;
 } else {
   configFile = 'configs/masterthesis_welcome.yaml';
+  //configFile = 'configs/masterthesis_mushra.yaml';
+  //configFile = 'configs/masterthesis_quality.yaml';
 }
 
 
