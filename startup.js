@@ -74,6 +74,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       }
       addPagesToPageManager(_pageManager, _pages[i]);
     } else {
+      var page_idx = i+1;
+      _pages[i].name = _pages[i].name.replace("$PAGE", page_idx.toString())
+      _pages[i].name = _pages[i].name.replace("$NUM_PAGES", _pages.length.toString())
       var pageConfig = _pages[i];
       if (pageConfig.type == "generic") {
         _pageManager.addPage(new GenericPage(_pageManager, pageConfig));
