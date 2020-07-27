@@ -253,3 +253,27 @@ li{
 	margin-left:25%;
 }
 
+.table-pad {
+  padding: 0em 1em;
+}
+
+.radio-td {
+  padding: 0px;
+}
+
+.radio-td .ui-radio {
+  display: flex;
+  align-items :center;
+  justify-content: center;
+}
+
+.radio-td .ui-radio:before, .radio-td .ui-radio:after {
+  border-bottom: 1px solid grey;
+  width: calc(50% - 0.75em);
+  content: " ";
+}
+ 
+.radio-tr td:nth-last-child(2) .ui-radio:after,
+.radio-tr td:nth-child(4) .ui-radio:before  {
+  border: 1px solid rgba(0,0,0,0);
+}
