@@ -13,16 +13,33 @@ pages:
   - type: generic
     id: all
     name: Welcome!
-    content: This study aims to evaluate the performance of a voice synthesis method in two experiments. Both take approximately 20 to 30 minutes. Please follow one or both links to participate in either one or both experiments. 
+    content: <p style="width:70%; margin:auto;">
+             This study aims to evaluate the performance of a voice synthesis method and consists of two experiments. Both take approximately 20 to 30 minutes. Please follow one or both links to participate in either one or both experiments. Both experiments will be described in detail before starting. <br>
+             <b>Note:</b> If you wish to only participate in one experiment, please choose one randomly.
+             <br><br>
+             
+             <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_mushra.yaml" target="_blank"> Experiment A </a></b><br><br>
+             <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_quality.yaml" target="_blank"> Experiment B </a></b>
+
+             
              <br><br>
              <b> For TU Berlin Audio Communication Students:</b><br>For your participation, 30 or 60 minutes for one or both experiments can be added to your <i>Versuchspersonenstunden</i>. Simply fill in your immatriculation number in the final page of each experiment.
              <br><br>
-             <b><a href="http://127.0.0.1/?config=masterthesis_mushra.yaml" target="_blank"> Experiment A </a></b><br><br>
-             <b><a href="http://127.0.0.1/?config=masterthesis_quality.yaml" target="_blank"> Experiment B </a></b>
 
-             <br><br><br>
-             <b>Note.</b>
-             <br>
-             The links above are randomized in order to even out participiation between both experiments. Both experiments will be described in detail before starting. If you wish to only participate in one experiment, please choose
-             one of the links randomly.
+             <br> <br>
+             <b> Privacy Notice </b><br>
+             <small>
+             The data collected in this study is used solely for the evaluation of my master thesis. In addition to your response to the survey questsions, you will be asked about 
+             your age and gender. This information is used to get a basic demographic overview of this studies participants. No additional data are stored or processed in any way. 
+             The data will be stored securely on a webserver and will be handeled confidentiality and anonymously.
+
+             <br><br>
+             For questions or if you wish for your response to be deleted, please contact:<br>
+             William Rodewald, <small><a href="mailto:w.rodewald@campus.tu-berlin.de" style="text-decoration:none;">w.rodewald@campus.tu-berlin.de</a></small>
              
+             </small>
+             </p>
+
+ 
+             
+

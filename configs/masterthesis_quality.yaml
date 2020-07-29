@@ -1,94 +1,2214 @@
 # test config mushra page, no waveform, 3 conditions,  looping, anchor35, anchor 70
 
 
-testname: Singing Voice Synthesis - Evaluation
-testId: quality_ab_experiment
+testname: Singing Voice Synthesis - Experiment B
+testId: masterthesis_quality
 bufferSize: 2048
 stopOnErrors: true
 showButtonPreviousPage: true
 remoteService: service/write.php
 
 
-pages:
+pages:    
+  - type: generic
+    id: generic_welcome
+    name: Welcome!
+    content:  <p style="width:70%; margin:auto;">
+              This study aims to evaluate the performance of a voice synthesis method. This experiment is expected to last between <b>20 and 30</b> minutes, but you are free  
+              to take as much time as you need. It is strongly advised to <b>use headphones</b>. If you experience any technical difficulies, it is advised to use a <b>laptop or desktop system</b> and the web browser <b>Chrome</b>.
+              <br><br>
+              <b>Procedure:</b>
+              </p>
+              <ul>
+                <li>The goal of this experiment is to rate the percieved quality difference between two audio samples.</li> 
+                <li>You will be presented with two sounds, <b>A</b> and <b>B</b> and are asked to rate the difference regarding specific voice qualities aspects in 5 increments.</li>
+                <li>The relevant voice quality aspects are explained in the following audio pages using audio examples.</li>
+              </ul>
+              <p style="width:70%; margin:auto;">
+              <b> Privacy Notice </b><br>
+              <small>
+              The data collected in this study is used solely for the evaluation of my master thesis. In addition to your response to the survey questsions, you will be asked about 
+              your age and gender. This information is used to get a basic demographic overview of this studies participants. No additional data are stored or processed in any way. 
+              The data will be stored securely on a webserver and will be handeled confidentiality and anonymously.
+              
+              <br><br>
+              For questions or if you wish for your response to be deleted, please contact:<br>
+              William Rodewald, <small><a href="mailto:w.rodewald@campus.tu-berlin.de" style="text-decoration:none;">w.rodewald@campus.tu-berlin.de</a></small>
+              
+              </small>
+              </p>
+
+  - type: volume
+    id: vol
+    name: Volume Settings
+    content: Please adjust the volume. you should not adjusted your volume during the experiment but you may come back to this page if necessary.
+    stimulus: configs/resources/audio/results_mp3/f1_a/audio/original.mp3
+    defaultVolume: 0.5
+
+  - type: generic
+    id: generic_example
+    name: Examples 
+    content: The following pages give examples for the voice qualities which you will be asked to rate in the experiment. The quality aspects considered are<br><br>
+        <b>Breathiness</b><br>
+        <b>Roughness</b><br>
+        <b>Brightness</b><br>
+        <b>Naturalness</b><br>
+
+  -
+    - type: example
+      id: breathiness
+      name: Example: Breathiness 
+      content: A <b>breathy</b> voice is characterized by an open sound with low intensity and audible noise, similar to a whispery voice. 
+      stimuli: 
+        - sample: configs/resources/audio/examples_mp3/w_breathiness.mp3
+          description: Breathy
+        - sample: configs/resources/audio/examples_mp3/wo_breathiness.mp3
+          description: Less Breathy
+
+    - type: example
+      id: roughness
+      name: Example: Roughness 
+      content: A <b>rough</b> voice is characterized by an irregularity oscillation which can be percieved as scratchy and intense and can be considered opposite of a soft voice.
+      stimuli: 
+        - sample: configs/resources/audio/examples_mp3/w_roughness.mp3
+          description: Rough
+        - sample: configs/resources/audio/examples_mp3/wo_roughness.mp3
+          description: Less Rough
+
+    - type: example
+      id: brightness
+      name: Example: Brightness 
+      content: <b>Bright</b> sounds are characterized by an emphasis on high frequency components as opposed to low frequency components.
+      stimuli: 
+        - sample: configs/resources/audio/examples_mp3/w_brightness.mp3
+          description: Bright
+        - sample: configs/resources/audio/examples_mp3/wo_brightness.mp3
+          description: Less Bright
+      
+    - type: generic
+      id: naturalness
+      name: Example: Naturalness 
+      content: A voice sounds natural when it's in percieved accordance with the listeners expectation of the human voice.
+
+  - type: generic
+    id: generic_trial
+    name: Start of Experiment
+    content: The following pages are part of the experiment. Please listen carefully and rate the difference in voice quality of both samples.  
+  -
+    - type: quality_ab
+      id: quality_f1_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f1_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f1_a/audio/synthesized_f1_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
 
 
-  - type: quality_ab
-    id: f1_a
-    name: Mono Trial
-    content: Please rate the quality of all stimuli.
-    showWaveform: true
-    enableLooping: true 
-    randomize: true 
-    reference: configs/resources/audio/results_wav/f1_a/audio/original.wav
-    stimulus:  configs/resources/audio/results_wav/f1_a/audio/synthesized_f1_a.wav
-    reversed_order: true
-    qualityItems:
-        - Item: Nasalality
-          Label: Nasalality
-          Description: Which of the stimuli sounds more nasalized?
-        - Item: Vibrato
-          Label: Vibrato
-          Description: Which of the stimuli contains more vibrato?
-        - Item: Breathiness
-          Label: Breathiness
-          Description: Which of the stimuli is more breathy?
-        - Item: Roughness
-          Label: Roughness
-          Description: Which is the stimuli is more rough?
-        - Item: Naturalness
-          Label: Naturalness
-          Description: Which is the stimuli sounds more natural?
-        - Item: Brilliance
-          Label: Brilliance
-          Description: Which is the stimuli contains more high frequencies?
+    - type: quality_ab
+      id: quality_f1_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f1_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f1_a/audio/synthesized_f1_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
 
-  - type: quality_ab
-    id: f4_o
-    name: Mono Trial 2
-    content: Please rate the quality of all stimuli.
-    showWaveform: true
-    enableLooping: true 
-    randomize: true 
-    reference: configs/resources/audio/results_wav/f4_o/audio/original.wav
-    stimulus:  configs/resources/audio/results_wav/f4_o/audio/synthesized_f4_o.wav
-    reversed_order: false
-    qualityItems:
-        - Item: Nasalality
-          Label: Nasalality
-          Description: Which of the stimuli sounds more nasalized?
-        - Item: Vibrato
-          Label: Vibrato
-          Description: Which of the stimuli contains more vibrato?
-        - Item: Breathiness
-          Label: Breathiness
-          Description: Which of the stimuli is more breathy?
-        - Item: Roughness
-          Label: Roughness
-          Description: Which is the stimuli is more rough?
-        - Item: Naturalness
-          Label: Naturalness
-          Description: Which is the stimuli sounds more natural?
-        - Item: Brilliance
-          Label: Brilliance
-          Description: Which is the stimuli contains more high frequencies?
-        
+
+    - type: quality_ab
+      id: quality_f1_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f1_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f1_i/audio/synthesized_f1_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f1_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f1_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f1_i/audio/synthesized_f1_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f1_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f1_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f1_o/audio/synthesized_f1_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f1_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f1_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f1_o/audio/synthesized_f1_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f4_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f4_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f4_a/audio/synthesized_f4_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f4_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f4_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f4_a/audio/synthesized_f4_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f4_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f4_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f4_i/audio/synthesized_f4_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f4_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f4_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f4_i/audio/synthesized_f4_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f4_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f4_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f4_o/audio/synthesized_f4_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f4_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f4_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f4_o/audio/synthesized_f4_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f5_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f5_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f5_a/audio/synthesized_f5_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f5_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f5_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f5_a/audio/synthesized_f5_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f5_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f5_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f5_i/audio/synthesized_f5_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f5_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f5_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f5_i/audio/synthesized_f5_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f5_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f5_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f5_o/audio/synthesized_f5_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f5_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f5_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f5_o/audio/synthesized_f5_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f6_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f6_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f6_a/audio/synthesized_f6_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f6_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f6_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f6_a/audio/synthesized_f6_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f6_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f6_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f6_i/audio/synthesized_f6_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f6_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f6_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f6_i/audio/synthesized_f6_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f6_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f6_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f6_o/audio/synthesized_f6_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f6_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f6_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f6_o/audio/synthesized_f6_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f8_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f8_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f8_a/audio/synthesized_f8_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f8_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f8_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f8_a/audio/synthesized_f8_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f8_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f8_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f8_i/audio/synthesized_f8_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f8_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f8_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f8_i/audio/synthesized_f8_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f8_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f8_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f8_o/audio/synthesized_f8_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_f8_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/f8_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/f8_o/audio/synthesized_f8_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m1_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m1_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m1_a/audio/synthesized_m1_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m1_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m1_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m1_a/audio/synthesized_m1_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m1_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m1_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m1_i/audio/synthesized_m1_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m1_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m1_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m1_i/audio/synthesized_m1_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m1_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m1_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m1_o/audio/synthesized_m1_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m1_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m1_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m1_o/audio/synthesized_m1_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m2_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m2_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m2_a/audio/synthesized_m2_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m2_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m2_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m2_a/audio/synthesized_m2_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m2_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m2_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m2_i/audio/synthesized_m2_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m2_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m2_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m2_i/audio/synthesized_m2_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m2_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m2_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m2_o/audio/synthesized_m2_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m2_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m2_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m2_o/audio/synthesized_m2_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m4_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m4_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m4_a/audio/synthesized_m4_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m4_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m4_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m4_a/audio/synthesized_m4_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m4_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m4_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m4_i/audio/synthesized_m4_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m4_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m4_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m4_i/audio/synthesized_m4_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m4_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m4_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m4_o/audio/synthesized_m4_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m4_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m4_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m4_o/audio/synthesized_m4_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m5_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m5_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m5_a/audio/synthesized_m5_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m5_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m5_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m5_a/audio/synthesized_m5_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m5_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m5_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m5_i/audio/synthesized_m5_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m5_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m5_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m5_i/audio/synthesized_m5_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m5_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m5_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m5_o/audio/synthesized_m5_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m5_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m5_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m5_o/audio/synthesized_m5_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m8_a
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m8_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m8_a/audio/synthesized_m8_a.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m8_a_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m8_a/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m8_a/audio/synthesized_m8_a.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m8_i
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m8_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m8_i/audio/synthesized_m8_i.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m8_i_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m8_i/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m8_i/audio/synthesized_m8_i.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m8_o
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m8_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m8_o/audio/synthesized_m8_o.mp3
+      reversed_order: false
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
+
+    - type: quality_ab
+      id: quality_m8_o_rev
+      name: Trial $PAGE of $NUM_PAGES
+      content: Please answer the questions bellow.
+      showmp3eform: true
+      enableLooping: true
+      reference: configs/resources/audio/results_mp3/m8_o/audio/original.mp3
+      stimulus:  configs/resources/audio/results_mp3/m8_o/audio/synthesized_m8_o.mp3
+      reversed_order: true
+      scale:
+        - Value: AA
+          Label: <small>strongly</small>
+        - Value: A
+          Label: <small>slightly</small>
+        - Value: 0
+          Label: <small>neutral</small>
+        - Value: B
+          Label: <small>slightly</small>
+        - Value: BB
+          Label: <small>strongly</small>
+      qualityItems:
+          - Item: Breathiness
+            Label: Breathiness
+            Description: Which of the two samples sounds more breathy?
+          - Item: Roughness
+            Label: Roughness
+            Description: Which of the two samples sounds more rough?
+          - Item: Brightness
+            Label: Brightness
+            Description: Which of the two samples sounds brighter?
+          - Item: Naturalness
+            Label: Naturalness
+            Description: Which of the two samples sounds more natural?
+
   - type: finish
     name: Thank you
-    content: Thank you for attending
-    popupcontent: Your results were sent. Goodbye and have a nice day
-    showResults: true
+    content: This final page will ask you some questions about your person. Feel free leave them empty if you don't wish to share personal information.<br>
+             After sending your results, please <b>wait</b> for an pop-up to show. This will signalise that the data was successfully stored. 
+    popupcontent: your results were sent. Thank you very much for your participation!
+    showResults: false
     writeResults: true
     questionnaire:
-        - type: text
-          label: eMail
-          name: email
-          optional: true
         - type: number
           label: Age
           name: age
           min: 0
           max: 100
           default: 30
+          optional: true
         - type: likert
           name: gender
           label: Gender
@@ -100,3 +2220,13 @@ pages:
               label: Male
             - value: other
               label: Other
+            - value: none
+              label: Prefer not to answer
+        - type: number
+          label: TU Berlin MatrNr.
+          name: matr
+          min: 0
+          max: 9999999
+          default: 0
+          optional: true
+
