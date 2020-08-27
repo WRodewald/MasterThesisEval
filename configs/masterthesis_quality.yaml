@@ -52,7 +52,8 @@ pages:
         <b>Breathiness</b><br>
         <b>Roughness</b><br>
         <b>Brightness</b><br>
-        <b>Naturalness</b><br>
+        <br>
+        Additionally, you will be asked to rate the overall <b>naturalness</b>. A voice sounds natural when it's in percieved accordance with the listeners expectation of the human voice.
 
   -
     - type: example
@@ -84,17 +85,14 @@ pages:
           description: Bright
         - sample: configs/resources/audio/examples_mp3/wo_brightness.mp3
           description: Less Bright
-      
-    - type: generic
-      id: naturalness
-      name: Example: Naturalness 
-      content: A voice sounds natural when it's in percieved accordance with the listeners expectation of the human voice.
 
   - type: generic
     id: generic_trial
     name: Start of Experiment
     content: The following pages are part of the experiment. Please listen carefully and rate the difference in voice quality of both samples.  
   -
+    - random
+    
     - type: quality_ab
       id: quality_f1_a
       name: Trial $PAGE of $NUM_PAGES
@@ -105,16 +103,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f1_a/audio/synthesized_f1_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -140,16 +146,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f1_a/audio/synthesized_f1_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -175,16 +189,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f1_i/audio/synthesized_f1_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -210,16 +232,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f1_i/audio/synthesized_f1_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -245,16 +275,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f1_o/audio/synthesized_f1_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -280,16 +318,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f1_o/audio/synthesized_f1_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -315,16 +361,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f4_a/audio/synthesized_f4_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -350,16 +404,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f4_a/audio/synthesized_f4_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -385,16 +447,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f4_i/audio/synthesized_f4_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -420,16 +490,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f4_i/audio/synthesized_f4_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -455,16 +533,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f4_o/audio/synthesized_f4_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -490,16 +576,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f4_o/audio/synthesized_f4_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -525,16 +619,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f5_a/audio/synthesized_f5_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -560,16 +662,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f5_a/audio/synthesized_f5_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -595,16 +705,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f5_i/audio/synthesized_f5_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -630,16 +748,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f5_i/audio/synthesized_f5_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -665,16 +791,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f5_o/audio/synthesized_f5_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -700,16 +834,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f5_o/audio/synthesized_f5_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -735,16 +877,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f6_a/audio/synthesized_f6_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -770,16 +920,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f6_a/audio/synthesized_f6_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -805,16 +963,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f6_i/audio/synthesized_f6_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -840,16 +1006,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f6_i/audio/synthesized_f6_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -875,16 +1049,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f6_o/audio/synthesized_f6_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -910,16 +1092,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f6_o/audio/synthesized_f6_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -945,16 +1135,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f8_a/audio/synthesized_f8_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -980,16 +1178,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f8_a/audio/synthesized_f8_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1015,16 +1221,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f8_i/audio/synthesized_f8_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1050,16 +1264,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f8_i/audio/synthesized_f8_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1085,16 +1307,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f8_o/audio/synthesized_f8_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1120,16 +1350,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/f8_o/audio/synthesized_f8_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1155,16 +1393,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m1_a/audio/synthesized_m1_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1190,16 +1436,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m1_a/audio/synthesized_m1_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1225,16 +1479,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m1_i/audio/synthesized_m1_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1260,16 +1522,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m1_i/audio/synthesized_m1_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1295,16 +1565,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m1_o/audio/synthesized_m1_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1330,16 +1608,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m1_o/audio/synthesized_m1_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1365,16 +1651,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m2_a/audio/synthesized_m2_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1400,16 +1694,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m2_a/audio/synthesized_m2_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1435,16 +1737,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m2_i/audio/synthesized_m2_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1470,16 +1780,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m2_i/audio/synthesized_m2_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1505,16 +1823,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m2_o/audio/synthesized_m2_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1540,16 +1866,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m2_o/audio/synthesized_m2_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1575,16 +1909,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m4_a/audio/synthesized_m4_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1610,16 +1952,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m4_a/audio/synthesized_m4_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1645,16 +1995,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m4_i/audio/synthesized_m4_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1680,16 +2038,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m4_i/audio/synthesized_m4_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1715,16 +2081,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m4_o/audio/synthesized_m4_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1750,16 +2124,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m4_o/audio/synthesized_m4_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1785,16 +2167,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m5_a/audio/synthesized_m5_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1820,16 +2210,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m5_a/audio/synthesized_m5_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1855,16 +2253,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m5_i/audio/synthesized_m5_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1890,16 +2296,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m5_i/audio/synthesized_m5_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1925,16 +2339,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m5_o/audio/synthesized_m5_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1960,16 +2382,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m5_o/audio/synthesized_m5_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1995,16 +2425,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m8_a/audio/synthesized_m8_a.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -2030,16 +2468,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m8_a/audio/synthesized_m8_a.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -2065,16 +2511,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m8_i/audio/synthesized_m8_i.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -2100,16 +2554,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m8_i/audio/synthesized_m8_i.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -2135,16 +2597,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m8_o/audio/synthesized_m8_o.mp3
       reversed_order: false
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -2170,16 +2640,24 @@ pages:
       stimulus:  configs/resources/audio/results_mp3/m8_o/audio/synthesized_m8_o.mp3
       reversed_order: true
       scale:
-        - Value: AA
-          Label: <small>strongly</small>
-        - Value: A
-          Label: <small>slightly</small>
+        - Value: -4
+          Label: 4<br><small>(strongly)</small>
+        - Value: -3
+          Label: 3<br>&nbsp;
+        - Value: -2
+          Label: 2<br>&nbsp;
+        - Value: -1
+          Label: 1<br>&nbsp;
         - Value: 0
-          Label: <small>neutral</small>
-        - Value: B
-          Label: <small>slightly</small>
-        - Value: BB
-          Label: <small>strongly</small>
+          Label: 0<br><small>(neutral)</small>
+        - Value: 1
+          Label: 1<br>&nbsp;
+        - Value: 2
+          Label: 2<br>&nbsp;
+        - Value: 3
+          Label: 3<br>&nbsp;
+        - Value: 4
+          Label: 4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -2195,19 +2673,29 @@ pages:
             Description: Which of the two samples sounds more natural?
 
   - type: finish
-    name: Thank you
-    content: This final page will ask you some questions about your person. Feel free leave them empty if you don't wish to share personal information.<br>
+    name: Thank You!
+    content: This final page will ask you some questions about your person and the study. Feel free leave personal questions empty if you don't wish to share personal information.<br>
              After sending your results, please <b>wait</b> for an pop-up to show. This will signalise that the data was successfully stored. 
-    popupcontent: your results were sent. Thank you very much for your participation!
+    popupcontent: Your results were sent. Thank you very much for your participation!
     showResults: false
     writeResults: true
     questionnaire:
+        - type: likert
+          name: device
+          label: Playback Device
+          optional: true
+          response:
+            - value: loudspeakers
+              label: Loudspeakers
+            - value: headphones
+              label: Headphones
+            - value: other
+              label: Other
         - type: number
           label: Age
           name: age
           min: 0
           max: 100
-          default: 30
           optional: true
         - type: likert
           name: gender
@@ -2223,10 +2711,9 @@ pages:
             - value: none
               label: Prefer not to answer
         - type: number
-          label: TU Berlin MatrNr.
+          label: TU Berlin MatrNr. <br><small>(if applicable)</small>
           name: matr
           min: 0
           max: 9999999
-          default: 0
           optional: true
 

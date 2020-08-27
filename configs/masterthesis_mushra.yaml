@@ -633,12 +633,23 @@ pages:
 
   - type: finish
     name: Thank You!
-    content: This final page will ask you some questions about your person. Feel free leave them empty if you don't wish to share personal information.<br>
+    content: This final page will ask you some questions about your person and the study. Feel free leave personal questions empty if you don't wish to share personal information.<br>
              After sending your results, please <b>wait</b> for an pop-up to show. This will signalise that the data was successfully stored. 
     popupcontent: Your results were sent. Thank you very much for your participation!
     showResults: false
     writeResults: true
     questionnaire:
+        - type: likert
+          name: device
+          label: Playback Device
+          optional: true
+          response:
+            - value: loudspeakers
+              label: Loudspeakers
+            - value: headphones
+              label: Headphones
+            - value: other
+              label: Other
         - type: number
           label: Age
           name: age
@@ -659,7 +670,7 @@ pages:
             - value: none
               label: Prefer not to answer
         - type: number
-          label: TU Berlin<br>MatrNr.
+          label: TU Berlin MatrNr. <br><small>(if applicable)</small>
           name: matr
           min: 0
           max: 9999999
