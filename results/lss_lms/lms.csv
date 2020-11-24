@@ -1,5 +1,0 @@
-session_test_id,trial_id,stimuli_rating,stimuli,rating_time
-lss_lms,lms2," not at all ",C3,2331
-lss_lms,lms2," not a lot ",C2,2331
-lss_lms,lms2," a bit ",C1,2331
-lss_lms,lms2," much ",ref,2331

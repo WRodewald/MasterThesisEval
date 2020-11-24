@@ -14,7 +14,7 @@ pages:
     id: generic_welcome
     name: Welcome!
     content:  <p style="width:70%; margin:auto;">
-              This study aims to evaluate the performance of a voice synthesis method. This experiment is expected to last between <b>20 and 30</b> minutes, but you are free  
+              This study aims to evaluate the performance of a voice synthesis method. This experiment is expected to last around <b>30</b> minutes, but you are free  
               to take as much time as you need. It is strongly advised to <b>use headphones</b>. If you experience any technical difficulies, it is advised to use a <b>laptop or desktop system</b> and the web browser <b>Chrome</b>.<br><br>
               
               <b>Procedure:</b>
@@ -118,7 +118,7 @@ pages:
   - type: generic
     id: generic_trial
     name: Start of Experiment
-    content: The following pages are part of the experiment. Please listen carefully and rate the quality of every stimulus in relation to the reference. 
+    content: The following pages are part of the experiment. Please listen carefully and rate the quality of every sound in relation to the reference. 
   -
     - random
     

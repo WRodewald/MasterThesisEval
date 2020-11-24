@@ -14,13 +14,17 @@ pages:
     id: all
     name: Welcome!
     content: <p style="width:70%; margin:auto;">
-             This study aims to evaluate the performance of a voice synthesis method and consists of two experiments. Both take approximately 20 to 30 minutes. Please follow one or both links to participate in either one or both experiments. Both experiments will be described in detail before starting. <br>
-             <b>Note:</b> If you wish to only participate in one experiment, please choose one randomly.
-             <br><br>
-             
-             <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_mushra.yaml" target="_blank"> Experiment A </a></b><br><br>
-             <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_quality.yaml" target="_blank"> Experiment B </a></b>
+             This study aims to evaluate the performance of a voice synthesis method and consists of <b>two experiments</b>. Both should take approximately <b>30 minutes</b> and will be described in detail before starting. Thank you for your help!<br><br><br>
 
+             <b>I want to participate in only one experiment.</b> <br>
+             Please follow the link below that forwards you to one of the two experiments randomly.<br><br>
+
+             <b><a id="rnd_link" href="" target="_blank"> Random Experiment </a></b><br><br><br>
+
+             <b>I want to participate in both experiments.</b><br><br>
+             
+             <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_mushra.yaml" target="_blank"> Experiment A </a></b> &nbsp;&nbsp;&nbsp;&nbsp;
+             <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_quality.yaml" target="_blank"> Experiment B </a></b><br><br>
              
              <br><br>
              <b> For TU Berlin Audio Communication Students:</b><br>For your participation, 30 or 60 minutes for one or both experiments can be added to your <i>Versuchspersonenstunden</i>. Simply fill in your immatriculation number in the final page of each experiment.
@@ -39,6 +43,18 @@ pages:
              
              </small>
              </p>
+
+             <script>
+             $(document).ready(function(){
+              if (Math.random() < 0.50) {
+                $('#rnd_link').attr('href', 'https://www.wrodewald.de/MasterThesis/?config=masterthesis_mushra.yaml');
+                $('#rnd_link').html("Random Experiment (A)");
+              } else {
+                $('#rnd_link').attr('href', 'https://www.wrodewald.de/MasterThesis/?config=masterthesis_quality.yaml');
+                $('#rnd_link').html("Random Experiment (B)");
+              }
+             });
+             </script>
 
  
              

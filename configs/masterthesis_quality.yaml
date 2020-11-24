@@ -14,15 +14,15 @@ pages:
     id: generic_welcome
     name: Welcome!
     content:  <p style="width:70%; margin:auto;">
-              This study aims to evaluate the performance of a voice synthesis method. This experiment is expected to last between <b>20 and 30</b> minutes, but you are free  
+              This study aims to evaluate the performance of a voice synthesis method. This experiment is expected to last around <b>30</b> minutes, but you are free  
               to take as much time as you need. It is strongly advised to <b>use headphones</b>. If you experience any technical difficulies, it is advised to use a <b>laptop or desktop system</b> and the web browser <b>Chrome</b>.
               <br><br>
               <b>Procedure:</b>
               </p>
               <ul>
                 <li>The goal of this experiment is to rate the percieved quality difference between two audio samples.</li> 
-                <li>You will be presented with two sounds, <b>A</b> and <b>B</b> and are asked to rate the difference regarding specific voice qualities aspects in 5 increments.</li>
-                <li>The relevant voice quality aspects are explained in the following audio pages using audio examples.</li>
+                <li>You will be presented with two sounds, <b>A</b> and <b>B</b> and are asked to rate the difference regarding specific voice qualities aspects in 9 increments.</li>
+                <li>The relevant voice quality terms are explained in the following audio pages using audio examples.</li>
               </ul>
               <p style="width:70%; margin:auto;">
               <b> Privacy Notice </b><br>
