@@ -5,7 +5,39 @@ close all;
 [~,meta_quality] = load_quality_data('data/quality_ab.csv');
 [~,meta_mushra]  = load_mushra_data('data/mushra.csv');
 
+mushra_age  = cellfun(@str2num, cellstr(meta_mushra.age));
+quality_age = cellfun(@str2num, cellstr(meta_quality.age));
 
+disp("MUSHRA, mean(Age)");
+disp(mean(mushra_age));
+
+disp("MUSHRA, std(Age)");
+disp(std(mushra_age));
+
+disp("MUSHRA, min(Age)");
+disp(min(mushra_age));
+
+disp("MUSHRA, max(Age)");
+disp(max(mushra_age));
+
+disp("MUSHRA, no matr");
+disp(sum(isundefined(meta_mushra.matr)))
+
+
+disp("A/B, mean(Age)");
+disp(mean(quality_age));
+
+disp("A/B, std(Age)");
+disp(std(quality_age));
+
+disp("A/B, min(Age)");
+disp(min(quality_age));
+
+disp("A/B, max(Age)");
+disp(max(quality_age));
+
+disp("A/B, no matr");
+disp(sum(isundefined(meta_quality.matr)))
 
 
 figure
@@ -15,6 +47,7 @@ title(['Age, N = ' num2str(length(meta_mushra.age))])
 subplot(1,2,2)
 barplot(meta_mushra.gender)
 title(['Age, N = ' num2str(length(meta_mushra.gender))])
+ 
 
 
 figure

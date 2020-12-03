@@ -23,8 +23,10 @@ pages:
 
              <b>I want to participate in both experiments.</b><br><br>
              
-             <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_mushra.yaml" target="_blank"> Experiment A </a></b> &nbsp;&nbsp;&nbsp;&nbsp;
+             <b><small><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_mushra.yaml" target="_blank"> Experiment A* </a></small></b> &nbsp;&nbsp;&nbsp;&nbsp;
              <b><a href="https://www.wrodewald.de/MasterThesis/?config=masterthesis_quality.yaml" target="_blank"> Experiment B </a></b><br><br>
+
+             <small>* We have reached the targeted number of participants for Experiment A.<br> Please participate in Experiment B instead. </small><br><br>
              
              <br><br>
              <b> For TU Berlin Audio Communication Students:</b><br>For your participation, 30 or 60 minutes for one or both experiments can be added to your <i>Versuchspersonenstunden</i>. Simply fill in your immatriculation number in the final page of each experiment.
@@ -46,7 +48,7 @@ pages:
 
              <script>
              $(document).ready(function(){
-              if (Math.random() < 0.50) {
+              if (Math.random() < 0.25) {
                 $('#rnd_link').attr('href', 'https://www.wrodewald.de/MasterThesis/?config=masterthesis_mushra.yaml');
                 $('#rnd_link').html("Random Experiment (A)");
               } else {

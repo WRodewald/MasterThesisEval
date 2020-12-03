@@ -103,23 +103,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -146,23 +146,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -189,23 +189,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -232,23 +232,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -275,23 +275,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -318,23 +318,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -361,23 +361,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -404,23 +404,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -447,23 +447,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -490,23 +490,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -533,23 +533,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -576,23 +576,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -619,23 +619,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -662,23 +662,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -705,23 +705,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -748,23 +748,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -791,23 +791,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -834,23 +834,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -877,23 +877,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -920,23 +920,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -963,23 +963,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1006,23 +1006,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1049,23 +1049,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1092,23 +1092,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1135,23 +1135,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1178,23 +1178,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1221,23 +1221,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1264,23 +1264,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1307,23 +1307,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
@@ -1350,23 +1350,23 @@ pages:
       randomize: true
       scale:
         - Value: -4
-          Label: 4<br><small>(strongly)</small>
+          Label: -4<br><small>(strongly)</small>
         - Value: -3
-          Label: 3<br>&nbsp;
+          Label: -3<br>&nbsp;
         - Value: -2
-          Label: 2<br>&nbsp;
+          Label: -2<br>&nbsp;
         - Value: -1
-          Label: 1<br>&nbsp;
+          Label: -1<br>&nbsp;
         - Value: 0
           Label: 0<br><small>(neutral)</small>
         - Value: 1
-          Label: 1<br>&nbsp;
+          Label: +1<br>&nbsp;
         - Value: 2
-          Label: 2<br>&nbsp;
+          Label: +2<br>&nbsp;
         - Value: 3
-          Label: 3<br>&nbsp;
+          Label: +3<br>&nbsp;
         - Value: 4
-          Label: 4<br><small>(strongly)</small>
+          Label: +4<br><small>(strongly)</small>
       qualityItems:
           - Item: Breathiness
             Label: Breathiness
