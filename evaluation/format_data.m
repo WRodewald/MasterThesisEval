@@ -17,3 +17,22 @@ tbl_quality_full = table(roughness.ID, roughness.Vowel, roughness.Gender, roughn
                    'VariableNames', {'ID', 'Vowel', 'Gender', 'Roughness', 'Breathiness', 'Brightness', 'Naturalness'});
 
 writetable(tbl_quality_full,  'data/quality_formatted.csv');
+
+
+
+CR = tbl_mushra(tbl_mushra.Condition == "reference",:);
+CH = tbl_mushra(tbl_mushra.Condition == "harmonic",:);
+CE = tbl_mushra(tbl_mushra.Condition == "estimated",:);
+CP = tbl_mushra(tbl_mushra.Condition == "synthesized",:);
+CA = tbl_mushra(tbl_mushra.Condition == "anchor",:);
+
+
+figure
+subplot(4,1,1);
+hist(CH.Rating-CR.Rating,40)
+subplot(4,1,2);
+hist(CE.Rating-CH.Rating,40)
+subplot(4,1,3);
+hist(CP.Rating-CE.Rating,40)
+subplot(4,1,4);
+hist(CA.Rating-CP.Rating,40)
