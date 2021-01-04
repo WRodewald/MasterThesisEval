@@ -1,12 +1,12 @@
 
-library(lme4)
-library(nlme)
-library(emmeans)
-library(GLMMadaptive)
+library(glmmTMB)
 
 mushra_data = read.csv(file=file.path("data", "mushra_formatted.csv"))
 
+mushra_data$R2 = 0.99 * (1-mushra_data$Rating / 100);
 
 
-fm <- mixed_model(fixed = (Rating/100) ~ Condition + Gender + Vowel, random = ~ 1 | ID, data = mushra_data, family = binomial(), control = list(verbose=TRUE))
+model = glmmTMB(R2 ~ Condition + Gender + Vowel + Gender*Vowel + Gender*Condition + Vowel*Condition + Gender*Vowel*Condition + (1|ID), mushra_data, ziformula = ~., family=beta_family(link = "logit"))
 
+
+summary(model)

@@ -15,6 +15,9 @@ function [tbl, meta] = load_quality_data(file_name)
     gender = regexprep(gender, 'quality_f.+', 'female');
     gender = regexprep(gender, 'quality_m.+', 'male');
 
+    sid = raw(:,6);
+    sid = cellfun(@(x) x((end-3):(end-2)), sid, 'UniformOutput', false);
+    
     %3. extract vowel
     vowel = raw(:,6);
     vowel = regexprep(vowel, '.+a', 'a');
@@ -29,14 +32,15 @@ function [tbl, meta] = load_quality_data(file_name)
     %5. quality
     quality = raw(:,7);
     
-    %6. generate id (for debugging)
+    %6. generate id
     id = transpose(1 + floor((0:(length(rating)-1))/120));
 
-    %7. creat table
-    tbl = table(id, gender, vowel, quality, rating, 'VariableNames',{'ID', 'Gender','Vowel', 'Quality', 'Rating'});
+    %creat table
+    tbl = table(id, sid, gender, vowel, quality, rating, 'VariableNames',{'ID', 'SID', 'Gender','Vowel', 'Quality', 'Rating'});
     tbl.Gender    = categorical(tbl.Gender);
     tbl.Vowel     = categorical(tbl.Vowel);
     tbl.Quality   = categorical(tbl.Quality);
+    tbl.SID       = categorical(tbl.SID);
     
     % meta data
     meta.age    = categorical(raw(1:120:end, 3));

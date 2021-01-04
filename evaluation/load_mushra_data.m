@@ -37,11 +37,15 @@ function [tbl, meta] = load_mushra_data(file_name)
     %6. generate id (for debugging)
     id = transpose(1 + floor((0:(length(rating)-1))/150));
 
+    sid = raw(:,6);
+    sid = cellfun(@(x) x((end-3):(end-2)), sid, 'UniformOutput', false);
+    
     %7. creat table
-    tbl = table(id, gender, vowel, condition, rating, 'VariableNames',{'ID', 'Gender','Vowel','Condition', 'Rating'});
+    tbl = table(id, sid, gender, vowel, condition, rating, 'VariableNames',{'ID', 'SID', 'Gender','Vowel','Condition', 'Rating'});
     tbl.Gender    = categorical(tbl.Gender);
     tbl.Vowel     = categorical(tbl.Vowel);
     tbl.Condition = categorical(tbl.Condition);
+    tbl.SID       = categorical(tbl.SID);
     
     
     

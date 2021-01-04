@@ -13,19 +13,41 @@ naturalness = tbl_quality(tbl_quality.Quality == "Naturalness",:);
 breathiness = tbl_quality(tbl_quality.Quality == "Breathiness",:);
 brightness  = tbl_quality(tbl_quality.Quality == "Brightness",:);
 
-tbl_quality_full = table(roughness.ID, roughness.Vowel, roughness.Gender, roughness.Rating, breathiness.Rating, brightness.Rating, naturalness.Rating, ...
-                   'VariableNames', {'ID', 'Vowel', 'Gender', 'Roughness', 'Breathiness', 'Brightness', 'Naturalness'});
+tbl_quality_full = table(roughness.ID, roughness.SID, roughness.Vowel, roughness.Gender, roughness.Rating, breathiness.Rating, brightness.Rating, naturalness.Rating, ...
+                   'VariableNames', {'ID', 'SID', 'Vowel', 'Gender', 'Roughness', 'Breathiness', 'Brightness', 'Naturalness'});
 
 writetable(tbl_quality_full,  'data/quality_formatted.csv');
 
 
-
+%%
 CR = tbl_mushra(tbl_mushra.Condition == "reference",:);
 CH = tbl_mushra(tbl_mushra.Condition == "harmonic",:);
 CE = tbl_mushra(tbl_mushra.Condition == "estimated",:);
 CP = tbl_mushra(tbl_mushra.Condition == "synthesized",:);
 CA = tbl_mushra(tbl_mushra.Condition == "anchor",:);
 
+CH.Rating = CH.Rating - CR.Rating;
+CE.Rating = CE.Rating - CR.Rating;
+CP.Rating = CP.Rating - CR.Rating;
+CA.Rating = CA.Rating - CR.Rating;
+
+mushra_delta = [CH; CE; CP; CA];
+writetable(mushra_delta, 'data/mushra_delta.csv');
+
+%%
+CR = tbl_mushra(tbl_mushra.Condition == "reference",:);
+CH = tbl_mushra(tbl_mushra.Condition == "harmonic",:);
+CE = tbl_mushra(tbl_mushra.Condition == "estimated",:);
+CP = tbl_mushra(tbl_mushra.Condition == "synthesized",:);
+CA = tbl_mushra(tbl_mushra.Condition == "anchor",:);
+
+CA.Rating = CA.Rating - CP.Rating;
+CP.Rating = CP.Rating - CE.Rating;
+CE.Rating = CE.Rating - CH.Rating;
+CH.Rating = CH.Rating - CR.Rating;
+
+mushra_delta = [CH; CE; CP; CA];
+writetable(mushra_delta, 'data/mushra_delta2.csv');
 
 figure
 subplot(4,1,1);
