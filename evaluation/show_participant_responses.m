@@ -1,6 +1,8 @@
 clear all; 
 close all;
 
+% script to scroll through some responses for the first Experiment
+
 [quality,meta_quality] = load_quality_data('data/quality_ab.csv');
 [mushra,meta_mushra]  = load_mushra_data('data/mushra.csv');
 

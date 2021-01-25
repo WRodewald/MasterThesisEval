@@ -1,5 +1,6 @@
 clear all; close all;
 
+% script formats data from raw resources and stores them in .csv files
 
 [tbl_quality,~] = load_quality_data('data/quality_ab.csv');
 [tbl_mushra, ~] = load_mushra_data('data/mushra.csv');
